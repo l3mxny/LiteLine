@@ -49,107 +49,107 @@
   },
   {
     "id": "BL007",
-    "name": "Blue Light Phone - Mathematics Building",
-    "description": "Main entrance",
-    "latitude": 38.9850,
-    "longitude": -76.9385,
-    "location": "Mathematics Building, College Park, MD"
+    "name": "Blue Light Phone - University House",
+    "description": "On trail to parking lot",
+    "latitude": 38.988531466650024,
+    "longitude": -76.9530340430353,
+    "location": "8150 Presidential Dr, College Park, MD 20742"
   },
   {
     "id": "BL008",
-    "name": "Blue Light Phone - Computer Science Building",
-    "description": "Near parking garage",
-    "latitude": 38.9845,
-    "longitude": -76.9375,
-    "location": "Computer Science Building, College Park, MD"
+    "name": "Blue Light Phone - Ludwig Field",
+    "description": "Northwest corner of field/track",
+    "latitude": 38.98865961741709,
+    "longitude": -76.95120443602882,
+    "location": "7898 Championship Ln, College Park, MD 20742"
   },
   {
     "id": "BL009",
-    "name": "Blue Light Phone - Art-Sociology Building",
-    "description": "Main quad area",
-    "latitude": 38.9875,
-    "longitude": -76.9450,
-    "location": "Art-Sociology Building, College Park, MD"
+    "name": "Blue Light Phone - Ludwig Field",
+    "description": "Southeast corner of field, near ticket booth",
+    "latitude": 38.98743181408848,
+    "longitude": -76.9498489971892,
+    "location": "7898 Championship Ln, College Park, MD 20742"
   },
   {
     "id": "BL010",
-    "name": "Blue Light Phone - Tawes Fine Arts Building",
-    "description": "Near parking lot",
-    "latitude": 38.9880,
-    "longitude": -76.9455,
-    "location": "Tawes Fine Arts Building, College Park, MD"
+    "name": "Blue Light Phone - Riggs Alumni Center",
+    "description": "Southwest corner of building",
+    "latitude": 38.98941046288111,
+    "longitude": -76.94934035384475,
+    "location": "7801 Alumni Dr, College Park, MD 20742"
   },
   {
     "id": "BL011",
-    "name": "Blue Light Phone - Clarice Smith Performing Arts Center",
-    "description": "Main entrance",
-    "latitude": 38.9890,
-    "longitude": -76.9465,
-    "location": "Clarice Smith Performing Arts Center, College Park, MD"
+    "name": "Blue Light Phone - South of Clarice Smith Performing Arts Center",
+    "description": "South side of building",
+    "latitude": 38.9898926544137,
+    "longitude": -76.95014216369353,
+    "location": "8270 Alumni Dr, College Park, MD 20742"
   },
   {
     "id": "BL012",
-    "name": "Blue Light Phone - Xfinity Center",
-    "description": "Parking lot area",
-    "latitude": 38.9900,
-    "longitude": -76.9475,
-    "location": "Xfinity Center, College Park, MD"
+    "name": "Blue Light Phone - Southeast of Clarice Smith Performing Arts Center",
+    "description": "Near building entrance facing Clarice Courtyard",
+    "latitude": 38.99045769461115,
+    "longitude": -76.9509325472263,
+    "location": "8270 Alumni Dr, College Park, MD 20742"
   },
   {
     "id": "BL013",
-    "name": "Blue Light Phone - Cole Field House",
-    "description": "Main entrance",
-    "latitude": 38.9895,
-    "longitude": -76.9480,
-    "location": "Cole Field House, College Park, MD"
+    "name": "Blue Light Phone - East of Clarice Smith Performing Arts Center",
+    "description": "East side of building, close to parking lot",
+    "latitude": 38.990865610842626,
+    "longitude": -76.95135987165479,
+    "location": "8270 Alumni Dr, College Park, MD 20742"
   },
   {
     "id": "BL014",
-    "name": "Blue Light Phone - Eppley Recreation Center",
-    "description": "Near main entrance",
-    "latitude": 38.9885,
-    "longitude": -76.9470,
-    "location": "Eppley Recreation Center, College Park, MD"
+    "name": "Blue Light Phone - Northeast of Clarice Smith Performing Arts Center",
+    "description": "Northeast of building, close to Backstage Lane",
+    "latitude": 38.991383611021945,
+    "longitude": -76.95101869186726,
+    "location": "8270 Alumni Dr, College Park, MD 20742"
   },
   {
     "id": "BL015",
-    "name": "Blue Light Phone - Health Center",
-    "description": "Parking area",
-    "latitude": 38.9875,
-    "longitude": -76.9460,
-    "location": "Health Center, College Park, MD"
+    "name": "Blue Light Phone - North of Clarice Smith Performing Arts Center",
+    "description": "North of building",
+    "latitude": 38.991531164138415,
+    "longitude": -76.95050797225637,
+    "location": "8270 Alumni Dr, College Park, MD 20742"
   },
   {
     "id": "BL016",
-    "name": "Blue Light Phone - Dining Hall - South Campus",
-    "description": "Main entrance",
-    "latitude": 38.9865,
-    "longitude": -76.9450,
-    "location": "South Campus Dining Hall, College Park, MD"
+    "name": "Blue Light Phone - South of Oakland Hall",
+    "description": "Near path leading to main entrance",
+    "latitude": 38.993527690541214,
+    "longitude": -76.94973162733064,
+    "location": "3912 Denton Service Ln, College Park, MD 20742"
   },
   {
     "id": "BL017",
-    "name": "Blue Light Phone - Dining Hall - North Campus",
-    "description": "Near residence halls",
-    "latitude": 38.9905,
-    "longitude": -76.9445,
-    "location": "North Campus Dining Hall, College Park, MD"
+    "name": "Blue Light Phone - East of Oakland Hall",
+    "description": "East side of building",
+    "latitude": 38.994170293984716,
+    "longitude": -76.94966744346091,
+    "location": "3912 Denton Service Ln, College Park, MD 20742"
   },
   {
     "id": "BL018",
-    "name": "Blue Light Phone - Ellicott Hall",
-    "description": "Residence hall entrance",
-    "latitude": 38.9910,
-    "longitude": -76.9435,
-    "location": "Ellicott Hall, College Park, MD"
+    "name": "Blue Light Phone - North of Oakland Hall",
+    "description": "North side of building, close to parking lot",
+    "latitude": 38.994246337742425,
+    "longitude": -76.948956298995,
+    "location": "3912 Denton Service Ln, College Park, MD 20742"
   },
   {
     "id": "BL019",
-    "name": "Blue Light Phone - Hagerstown Hall",
-    "description": "Residence hall area",
-    "latitude": 38.9915,
-    "longitude": -76.9425,
-    "location": "Hagerstown Hall, College Park, MD"
+    "name": "Blue Light Phone - Center for Young Children",
+    "description": "North side of building, close to parking lot",
+    "latitude": 38.99389055782775,
+    "longitude": -76.94876351070228,
+    "location": "Valley Dr, College Park, MD 20742"
   },
   {
     "id": "BL020",

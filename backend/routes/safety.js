@@ -1,4 +1,5 @@
 import express from 'express';
+import blueLightsService from '../services/blueLights.js';
 
 const router = express.Router();
 
@@ -24,15 +25,22 @@ router.post('/nearest', async (req, res) => {
       });
     }
 
-    // TODO: Call Person 1's service when ready
-    // import { getNearestBlueLights } from '../services/blueLights.js';
-    // const blueLights = await getNearestBlueLights({ location, options });
+    // Call Person 1's service
+    const { lat, lng } = location;
+    const { maxDistance = null, limit = 5 } = options;
     
-    // For now, return placeholder
-    return res.status(503).json({
-      error: 'Service not ready',
-      message: 'Blue Light service is being set up. Person 1 is working on it!',
-      hint: 'Once Person 1 creates services/blueLights.js, this will work.'
+    const blueLights = blueLightsService.getNearestBlueLights(
+      lat,
+      lng,
+      limit,
+      maxDistance
+    );
+    
+    return res.json({
+      success: true,
+      count: blueLights.length,
+      location: { lat, lng },
+      blueLights: blueLights
     });
 
   } catch (error) {

@@ -1,0 +1,260 @@
+[
+  {
+    "id": "BL001",
+    "name": "Blue Light Phone - Graduate Hills Apartment (292)",
+    "description": "To the right side of the building entrance",
+    "latitude": 38.984687175936074,
+    "longitude": -76.95868550173074,
+    "location": "3401 Tulane Dr, Adelphi, MD 20783"
+  },
+  {
+    "id": "BL002",
+    "name": "Blue Light Phone - Small Graduate Hills Playground",
+    "description": "Near playground area",
+    "latitude": 38.98519023179944,
+    "longitude": -76.95784479835578,
+    "location": "3408 Tulane Dr, Adelphi, MD 20783"
+  },
+  {
+    "id": "BL003",
+    "name": "Blue Light Phone - Graduate Hills Apartment (287)",
+    "description": "Near south east corner of building",
+    "latitude": 38.98494139794056,
+    "longitude": -76.9567757123596,
+    "location": "3412 Tulane Dr, Adelphi, MD 20783"
+  },
+  {
+    "id": "BL004",
+    "name": "Blue Light Phone - Big Graduate Hills Playground",
+    "description": "Near playground area",
+    "latitude": 38.984418896026455,
+    "longitude": -76.95668527669457,
+    "location": "3425 Tulane Dr, Hyattsville, MD 20783"
+  },
+  {
+    "id": "BL005",
+    "name": "Blue Light Phone - Graduate Hills Apartment (289)",
+    "description": "Near northeast corner of building",
+    "latitude": 38.984851318553176,
+    "longitude": -76.95568871506204,
+    "location": "7702 Adelphi Rd, Hyattsville, MD 20783"
+  },
+  {
+    "id": "BL006",
+    "name": "Blue Light Phone - Purple Line Station - Adelphi Road-UMGC-UMD",
+    "description": "On the station",
+    "latitude": 38.98535222494212,
+    "longitude": -76.95477362440413,
+    "location": "Campus Drive &, Adelphi Rd, College Park, MD"
+  },
+  {
+    "id": "BL007",
+    "name": "Blue Light Phone - Mathematics Building",
+    "description": "Main entrance",
+    "latitude": 38.9850,
+    "longitude": -76.9385,
+    "location": "Mathematics Building, College Park, MD"
+  },
+  {
+    "id": "BL008",
+    "name": "Blue Light Phone - Computer Science Building",
+    "description": "Near parking garage",
+    "latitude": 38.9845,
+    "longitude": -76.9375,
+    "location": "Computer Science Building, College Park, MD"
+  },
+  {
+    "id": "BL009",
+    "name": "Blue Light Phone - Art-Sociology Building",
+    "description": "Main quad area",
+    "latitude": 38.9875,
+    "longitude": -76.9450,
+    "location": "Art-Sociology Building, College Park, MD"
+  },
+  {
+    "id": "BL010",
+    "name": "Blue Light Phone - Tawes Fine Arts Building",
+    "description": "Near parking lot",
+    "latitude": 38.9880,
+    "longitude": -76.9455,
+    "location": "Tawes Fine Arts Building, College Park, MD"
+  },
+  {
+    "id": "BL011",
+    "name": "Blue Light Phone - Clarice Smith Performing Arts Center",
+    "description": "Main entrance",
+    "latitude": 38.9890,
+    "longitude": -76.9465,
+    "location": "Clarice Smith Performing Arts Center, College Park, MD"
+  },
+  {
+    "id": "BL012",
+    "name": "Blue Light Phone - Xfinity Center",
+    "description": "Parking lot area",
+    "latitude": 38.9900,
+    "longitude": -76.9475,
+    "location": "Xfinity Center, College Park, MD"
+  },
+  {
+    "id": "BL013",
+    "name": "Blue Light Phone - Cole Field House",
+    "description": "Main entrance",
+    "latitude": 38.9895,
+    "longitude": -76.9480,
+    "location": "Cole Field House, College Park, MD"
+  },
+  {
+    "id": "BL014",
+    "name": "Blue Light Phone - Eppley Recreation Center",
+    "description": "Near main entrance",
+    "latitude": 38.9885,
+    "longitude": -76.9470,
+    "location": "Eppley Recreation Center, College Park, MD"
+  },
+  {
+    "id": "BL015",
+    "name": "Blue Light Phone - Health Center",
+    "description": "Parking area",
+    "latitude": 38.9875,
+    "longitude": -76.9460,
+    "location": "Health Center, College Park, MD"
+  },
+  {
+    "id": "BL016",
+    "name": "Blue Light Phone - Dining Hall - South Campus",
+    "description": "Main entrance",
+    "latitude": 38.9865,
+    "longitude": -76.9450,
+    "location": "South Campus Dining Hall, College Park, MD"
+  },
+  {
+    "id": "BL017",
+    "name": "Blue Light Phone - Dining Hall - North Campus",
+    "description": "Near residence halls",
+    "latitude": 38.9905,
+    "longitude": -76.9445,
+    "location": "North Campus Dining Hall, College Park, MD"
+  },
+  {
+    "id": "BL018",
+    "name": "Blue Light Phone - Ellicott Hall",
+    "description": "Residence hall entrance",
+    "latitude": 38.9910,
+    "longitude": -76.9435,
+    "location": "Ellicott Hall, College Park, MD"
+  },
+  {
+    "id": "BL019",
+    "name": "Blue Light Phone - Hagerstown Hall",
+    "description": "Residence hall area",
+    "latitude": 38.9915,
+    "longitude": -76.9425,
+    "location": "Hagerstown Hall, College Park, MD"
+  },
+  {
+    "id": "BL020",
+    "name": "Blue Light Phone - La Plata Hall",
+    "description": "Residence hall entrance",
+    "latitude": 38.9920,
+    "longitude": -76.9415,
+    "location": "La Plata Hall, College Park, MD"
+  },
+  {
+    "id": "BL021",
+    "name": "Blue Light Phone - Cambridge Community",
+    "description": "Community center area",
+    "latitude": 38.9925,
+    "longitude": -76.9405,
+    "location": "Cambridge Community, College Park, MD"
+  },
+  {
+    "id": "BL022",
+    "name": "Blue Light Phone - Leonardtown Community",
+    "description": "Community center",
+    "latitude": 38.9930,
+    "longitude": -76.9395,
+    "location": "Leonardtown Community, College Park, MD"
+  },
+  {
+    "id": "BL023",
+    "name": "Blue Light Phone - South Hill Community",
+    "description": "Near parking",
+    "latitude": 38.9855,
+    "longitude": -76.9485,
+    "location": "South Hill Community, College Park, MD"
+  },
+  {
+    "id": "BL024",
+    "name": "Blue Light Phone - North Hill Community",
+    "description": "Community center",
+    "latitude": 38.9900,
+    "longitude": -76.9390,
+    "location": "North Hill Community, College Park, MD"
+  },
+  {
+    "id": "BL025",
+    "name": "Blue Light Phone - Campus Drive - Near Route 1",
+    "description": "Main campus entrance",
+    "latitude": 38.9840,
+    "longitude": -76.9490,
+    "location": "Campus Drive & Route 1, College Park, MD"
+  },
+  {
+    "id": "BL026",
+    "name": "Blue Light Phone - Regents Drive - Near Stadium",
+    "description": "Stadium area",
+    "latitude": 38.9890,
+    "longitude": -76.9495,
+    "location": "Regents Drive, College Park, MD"
+  },
+  {
+    "id": "BL027",
+    "name": "Blue Light Phone - M Circle",
+    "description": "Main campus circle",
+    "latitude": 38.9870,
+    "longitude": -76.9440,
+    "location": "M Circle, College Park, MD"
+  },
+  {
+    "id": "BL028",
+    "name": "Blue Light Phone - Testudo Statue Area",
+    "description": "Near McKeldin Mall",
+    "latitude": 38.9865,
+    "longitude": -76.9430,
+    "location": "Testudo Statue Area, College Park, MD"
+  },
+  {
+    "id": "BL029",
+    "name": "Blue Light Phone - Parking Garage - Stadium Drive",
+    "description": "Parking garage entrance",
+    "latitude": 38.9880,
+    "longitude": -76.9500,
+    "location": "Stadium Drive Parking Garage, College Park, MD"
+  },
+  {
+    "id": "BL030",
+    "name": "Blue Light Phone - Parking Garage - Regents Drive",
+    "description": "Parking garage area",
+    "latitude": 38.9850,
+    "longitude": -76.9380,
+    "location": "Regents Drive Parking Garage, College Park, MD"
+  },
+  {
+    "id": "BL031",
+    "name": "Blue Light Phone - Campus Drive - Near Engineering",
+    "description": "Engineering quad area",
+    "latitude": 38.9845,
+    "longitude": -76.9400,
+    "location": "Campus Drive, College Park, MD"
+  },
+  {
+    "id": "BL032",
+    "name": "Blue Light Phone - Baltimore Avenue - Campus Entrance",
+    "description": "Main campus entrance",
+    "latitude": 38.9835,
+    "longitude": -76.9510,
+    "location": "Baltimore Avenue Entrance, College Park, MD"
+  }
+]
+
+

@@ -254,6 +254,14 @@
     "latitude": 38.9835,
     "longitude": -76.9510,
     "location": "Baltimore Avenue Entrance, College Park, MD"
+  },
+  {
+    "id": "BL021",
+    "name": "Blue Light Phone - Hagerstown Hall",
+    "description": "East side of building",
+    "latitude": 38.99217692136531,
+    "longitude": -76.94769057236515,
+    "location": "Hagerstown Hall, 8075 Hagerstown Ln, College Park, MD 20742"
   }
 ]
 

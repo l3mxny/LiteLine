@@ -28,6 +28,33 @@ const SUGGESTIONS: string[] = [
   'How can I help a friend in danger?',
 ]
 
+// Simple rule-based responder for MVP (no external AI)
+const getAssistantReply = (content: string): string => {
+  const text = content.toLowerCase()
+
+  if (text.includes('unsafe') || text.includes('scared') || text.includes('afraid') || text.includes('followed')) {
+    return "I'm really sorry you're feeling unsafe. If you are in immediate danger, call 911 right now. If you can, move to a bright, public place and stay on the phone with someone you trust. You can also head toward the nearest blue light phone or campus building with staff, and let campus safety know exactly where you are."
+  }
+
+  if (text.includes('blue light') || text.includes('bluelite') || text.includes('nearest')) {
+    return 'Use the map to locate the nearest blue light phone and walk directly toward it while staying aware of your surroundings. If someone is following you or you feel threatened, call 911 on the way. When you reach the blue light, press the button and clearly say your name, location, and what is happening.'
+  }
+
+  if (text.includes('police') || text.includes('campus safety') || text.includes('security')) {
+    return 'To reach campus police, you can use the blue light phones on the map or call the non-emergency and emergency numbers listed in the contacts screen. When you call, calmly share your name, exact location, who is involved, and whether anyone is hurt. If it is an emergency or someone is in danger, call 911 immediately.'
+  }
+
+  if (text.includes('car accident') || text.includes('crash') || text.includes('hit')) {
+    return 'After a car accident, first check if anyone is injured and call 911 if there are any injuries or major damage. Move to a safe place off the roadway if you can. Exchange names, insurance, and contact information with the other driver, and take photos of the scene. If you are on campus, you can also contact campus police for assistance.'
+  }
+
+  if (text.includes('friend') || text.includes('help someone') || text.includes('help a friend')) {
+    return "If a friend might be in danger, stay with them if it's safe for you, move to a safe public place, and ask directly how you can support them. If they are in immediate danger, call 911 or campus police even if they are unsure. You can also involve an RA, counselor, or trusted adult who can help keep them safe."
+  }
+
+  return 'If this is an emergency, call 911 or use the nearest blue light phone right away. I can also walk you through safety steps, how to contact campus police, and what to do next—try asking about your situation in a sentence or two, like “I feel unsafe walking home” or “How do I help a friend who might be in danger?”'
+}
+
 const ChatbotPage: React.FC<ChatbotPageProps> = ({ onBack }) => {
   const [messages, setMessages] = useState<ChatMessage[]>([])
   const [input, setInput] = useState<string>('')
@@ -44,8 +71,7 @@ const ChatbotPage: React.FC<ChatbotPageProps> = ({ onBack }) => {
     const assistantMsg: ChatMessage = {
       id: crypto.randomUUID(),
       role: 'assistant',
-      content:
-        'If this is an emergency, call 911 or use the nearest blue light phone. I can also guide you step‑by‑step and share campus resources.',
+      content: getAssistantReply(content),
     }
     setMessages((prev) => [...prev, userMsg, assistantMsg])
     setInput('')
@@ -96,7 +122,7 @@ const ChatbotPage: React.FC<ChatbotPageProps> = ({ onBack }) => {
           <div className="mt-16 flex justify-center px-4">
             <div className="w-full max-w-2xl rounded-2xl bg-white/5 border border-white/10 shadow-sm px-6 py-6 text-center backdrop-blur-sm">
               <h1 className="text-[34px] md:text-[36px] leading-tight font-extrabold text-white">
-                TEST CHATBOT PAGE
+                CHAT WITH LITEBOT
               </h1>
               <p className="mt-3 mx-auto max-w-xl text-base md:text-[17px] leading-relaxed text-slate-200/90">
                 Ask about safety steps, how to reach help, or where to find the nearest blue light phone.

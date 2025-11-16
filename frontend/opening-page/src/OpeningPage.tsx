@@ -1,96 +1,64 @@
-import React, { useState, useEffect } from 'react'
-import './OpeningPage.css'
+import React from 'react'
 
-const APP_LOAD_DURATION = 2200
+interface OpeningPageProps {
+  onContinue: () => void
+}
 
-const OpeningPage: React.FC = () => {
-  const [isLoading, setIsLoading] = useState<boolean>(true)
-  const [isLoaded, setIsLoaded] = useState<boolean>(false)
-
-  useEffect(() => {
-    setIsLoading(true)
-
-    const timer = setTimeout(() => {
-      setIsLoading(false)
-      setIsLoaded(true)
-    }, APP_LOAD_DURATION)
-
-    return () => clearTimeout(timer)
-  }, [])
-
+const OpeningPage: React.FC<OpeningPageProps> = ({ onContinue }) => {
   return (
-    <main className={`opening-page ${isLoading ? 'is-loading' : ''} ${isLoaded ? 'is-loaded' : ''}`}>
-      <div className="left-figure" aria-hidden="true">
-        <div className="blue-light-station">
-          <div className="station-pole"></div>
-          <div className="station-light">
-            <div className="light-glow"></div>
+    <main
+      className="relative min-h-screen w-full bg-[#020b25] text-white font-sans flex flex-col justify-between px-4 py-10 md:px-8 overflow-hidden"
+      onClick={onContinue}
+    >
+      <div className="pointer-events-none absolute inset-y-6 left-0 flex flex-col items-center">
+        <div className="h-full w-20 rounded-t-3xl bg-[#1f6d94] relative overflow-hidden">
+          {/* top white box */}
+          <div className="absolute -top-6 left-0 right-0 mx-auto h-24 w-24 rounded-t-2xl rounded-b-xl bg-[#f2f4f7] flex items-center justify-center">
+            <div className="h-12 w-6 rounded-sm bg-[#0f2c61]" />
           </div>
-          <div className="station-panel">
-            <div className="panel-button"></div>
-            <div className="panel-text">EMERGENCY</div>
+
+          {/* middle white bar */}
+          <div className="absolute inset-x-0 top-1/2 flex justify-start pl-4">
+            <div className="h-20 w-5 rounded-md bg-[#d7dde6]" />
           </div>
         </div>
       </div>
 
-      <section className="hero">
-        <div className="logo-wrapper">
-          <div 
-            className={`logo-outer glow ${isLoading ? 'loading' : ''}`}
-            aria-busy={isLoading}
-          >
-            <div className="logo-icon">
-              <svg viewBox="0 0 100 100" className="hand-icon" xmlns="http://www.w3.org/2000/svg">
-                {/* Hand outline - palm facing up */}
-                <path
-                  d="M25 55 Q20 50 20 45 Q20 35 25 30 Q30 25 40 25 Q45 25 50 30 Q55 25 60 25 Q65 25 70 30 Q75 35 75 45 Q75 50 70 55 L65 65 L60 75 L55 80 L45 80 L40 75 L35 65 L30 60 Z"
-                  fill="none"
-                  stroke="#53c0ff"
-                  strokeWidth="2.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                {/* Antenna base - vertical line from palm center */}
-                <line x1="50" y1="55" x2="50" y2="40" stroke="#53c0ff" strokeWidth="2.5" strokeLinecap="round" />
-                {/* Antenna column - rectangular base */}
-                <rect x="46" y="40" width="8" height="12" fill="#53c0ff" rx="1" />
-                {/* Antenna top circle */}
-                <circle cx="50" cy="35" r="3.5" fill="#53c0ff" />
-                {/* Signal waves - concentric arcs emanating upward */}
-                <path
-                  d="M50 35 Q55 30 60 35"
-                  fill="none"
-                  stroke="#53c0ff"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  opacity="0.85"
-                />
-                <path
-                  d="M50 35 Q58 25 66 35"
-                  fill="none"
-                  stroke="#53c0ff"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  opacity="0.65"
-                />
-                <path
-                  d="M50 35 Q62 20 74 35"
-                  fill="none"
-                  stroke="#53c0ff"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  opacity="0.45"
-                />
-              </svg>
+      <section className="flex flex-1 flex-col justify-center pl-32 md:pl-40">
+        <div className="flex flex-col items-start gap-8">
+          <h1 className="text-5xl font-extrabold tracking-tight text-white">LiteLine</h1>
+
+          <div className="flex items-center justify-center">
+            <div className="relative h-40 w-40 rounded-full border-[6px] border-[#53c0ff] bg-[#031025] flex items-center justify-center">
+              <div className="h-28 w-28 rounded-full border-[3px] border-[#53c0ff] flex items-center justify-center text-[#53c0ff]">
+                <svg viewBox="0 0 100 100" className="h-20 w-20" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M25 60 Q20 50 25 40 Q30 35 40 35 Q45 35 50 40 Q55 35 60 35 Q70 35 75 45 Q80 55 72 65 L65 75 L60 80 L50 82 L42 78 L35 70 Z"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <line x1="50" y1="52" x2="50" y2="38" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
+                  <rect x="46" y="35" width="8" height="10" fill="currentColor" rx="1" />
+                  <circle cx="50" cy="31" r="3" fill="currentColor" />
+                  <path d="M50 30 Q56 25 62 30" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+                  <path d="M50 27 Q60 20 70 27" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+                </svg>
+              </div>
             </div>
           </div>
         </div>
-        <h1 className="app-title">LiteLine</h1>
-        <p className="tagline">Follow the light</p>
       </section>
+
+      <footer className="flex justify-center">
+        <p className="text-sm font-medium tracking-wide text-slate-100">Follow the light</p>
+      </footer>
     </main>
   )
 }
 
 export default OpeningPage
+
 

@@ -37,6 +37,38 @@ const MapPage: React.FC<MapPageProps> = ({ onOpenChat, onOpenContacts, onBackToO
     if (typeof window === 'undefined') return
     if (!(window as any).google || !mapRef.current || map) return
 
+    // Google Maps dark style (lightweight preset)
+    const darkStyle = [
+      { elementType: 'geometry', stylers: [{ color: '#1f2937' }] },
+      { elementType: 'labels.text.stroke', stylers: [{ color: '#1f2937' }] },
+      { elementType: 'labels.text.fill', stylers: [{ color: '#e5e7eb' }] },
+      {
+        featureType: 'poi',
+        elementType: 'labels.text.fill',
+        stylers: [{ color: '#c7d2fe' }],
+      },
+      {
+        featureType: 'poi.park',
+        elementType: 'geometry',
+        stylers: [{ color: '#0b2537' }],
+      },
+      {
+        featureType: 'water',
+        elementType: 'geometry',
+        stylers: [{ color: '#0b1b2b' }],
+      },
+      {
+        featureType: 'road',
+        elementType: 'geometry',
+        stylers: [{ color: '#334155' }],
+      },
+      {
+        featureType: 'road',
+        elementType: 'labels.text.fill',
+        stylers: [{ color: '#cbd5e1' }],
+      },
+    ]
+
     navigator.geolocation.getCurrentPosition(
       (pos) => {
         const center = { lat: pos.coords.latitude, lng: pos.coords.longitude }
@@ -48,6 +80,7 @@ const MapPage: React.FC<MapPageProps> = ({ onOpenChat, onOpenContacts, onBackToO
           mapTypeControl: true,
           streetViewControl: true,
           fullscreenControl: true,
+          styles: darkStyle,
         })
 
         setMap(m)
@@ -244,6 +277,7 @@ const MapPage: React.FC<MapPageProps> = ({ onOpenChat, onOpenContacts, onBackToO
 
       {/* Top-right floating actions (chat + call) */}
       <div className="pointer-events-none absolute right-6 top-10 flex flex-col gap-4">
+<<<<<<< HEAD
         <button
           className="pointer-events-auto h-14 w-14 rounded-full bg-white/95 shadow-lg shadow-slate-900 flex items-center justify-center"
           onClick={onOpenChat}
@@ -258,6 +292,49 @@ const MapPage: React.FC<MapPageProps> = ({ onOpenChat, onOpenContacts, onBackToO
         >
           <span className="text-2xl text-[#132a6b]">📞</span>
         </button>
+=======
+        {(() => {
+          // Solid light-blue circular buttons (non-transparent), crisp icons
+          const btnCls =
+            'pointer-events-auto h-16 w-16 rounded-full bg-[#cfe0f5] shadow-lg flex items-center justify-center hover:shadow-xl active:scale-[0.98] transition';
+          const iconCls = 'h-7 w-7 text-slate-900';
+          return (
+            <>
+              {/* Chat / Message (Apple-like outline) */}
+              <button className={btnCls} onClick={onOpenChat} aria-label="Open chat">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  className={iconCls}
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M6.75 6.75h10.5A2.25 2.25 0 0 1 19.5 9v5.25A2.25 2.25 0 0 1 17.25 16.5H12l-3 2.25V16.5H6.75A2.25 2.25 0 0 1 4.5 14.25V9a2.25 2.25 0 0 1 2.25-2.25z" />
+                </svg>
+              </button>
+
+              {/* Phone handset (Apple-like outline) */}
+              <button className={btnCls} onClick={onOpenContacts} aria-label="Open police contacts">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  className={iconCls}
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M15.2 16.1c.7.2 1.3.5 1.9.9.4.3.5.9.3 1.3l-.5.9c-.3.6-1 .9-1.7.8-2.6-.2-5.4-1.6-7.8-4.1S3 10.6 2.8 8c-.1-.7.2-1.4.8-1.7l.9-.5c.4-.2 1 0 1.3.3.4.6.7 1.2.9 1.9.1.3 0 .7-.2.9l-1.1 1.1c.7 1.5 1.8 2.9 3.1 4.2 1.3 1.3 2.7 2.4 4.2 3.1l1.1-1.1c.2-.2.6-.3.9-.2z" />
+                </svg>
+              </button>
+            </>
+          )
+        })()}
+>>>>>>> emily
       </div>
 
       {/* Bottom CTA / Route panel over the map */}
@@ -270,12 +347,18 @@ const MapPage: React.FC<MapPageProps> = ({ onOpenChat, onOpenContacts, onBackToO
 
         {!nearestBlueLight && (
           <button
-            className="pointer-events-auto w-full rounded-full bg-[#132a6b] text-slate-50 font-semibold text-lg py-4 flex items-center justify-center gap-3 shadow-[0_20px_50px_rgba(15,23,42,0.95)] disabled:opacity-60 disabled:cursor-not-allowed"
+            className="pointer-events-auto w-full rounded-full bg-[#7b8fc5] text-white font-semibold text-lg py-4 flex items-center justify-center gap-3 shadow-[0_18px_36px_rgba(15,23,42,0.7)] disabled:opacity-60 disabled:cursor-not-allowed"
             onClick={handleFindNearest}
             disabled={isFinding || !userLocation}
           >
-            <span>{isFinding ? 'Finding Blue Lite…' : 'Find Nearest Blue Lite'}</span>
-            <span className="text-2xl">📍</span>
+            <span className="leading-none">{isFinding ? 'Finding Blue Lite…' : 'Find Nearest Blue Lite'}</span>
+            <span className="ml-2 inline-flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="h-6 w-6">
+                {/* White pin with blue dot (Apple‑like) */}
+                <path d="M12 2c-3.9 0-7 3.1-7 7 0 5 7 12 7 12s7-7 7-12c0-3.9-3.1-7-7-7z" fill="#e8f0ff"/>
+                <circle cx="12" cy="9" r="2.2" fill="#2647a4"/>
+              </svg>
+            </span>
           </button>
         )}
 

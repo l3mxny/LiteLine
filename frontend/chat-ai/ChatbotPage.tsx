@@ -122,11 +122,7 @@ const ChatbotPage: React.FC<ChatbotPageProps> = ({ onBack }) => {
           <div className="mt-16 flex justify-center px-4">
             <div className="w-full max-w-2xl rounded-2xl bg-white/5 border border-white/10 shadow-sm px-6 py-6 text-center backdrop-blur-sm">
               <h1 className="text-[34px] md:text-[36px] leading-tight font-extrabold text-white">
-<<<<<<< HEAD
-                CHAT WITH LITEBOT
-=======
                 How can I help?
->>>>>>> emily
               </h1>
               <p className="mt-3 mx-auto max-w-xl text-base md:text-[17px] leading-relaxed text-slate-200/90">
                 Ask about safety steps, how to reach help, or where to find the nearest blue light phone.

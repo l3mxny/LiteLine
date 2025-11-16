@@ -277,22 +277,6 @@ const MapPage: React.FC<MapPageProps> = ({ onOpenChat, onOpenContacts, onBackToO
 
       {/* Top-right floating actions (chat + call) */}
       <div className="pointer-events-none absolute right-6 top-10 flex flex-col gap-4">
-<<<<<<< HEAD
-        <button
-          className="pointer-events-auto h-14 w-14 rounded-full bg-white/95 shadow-lg shadow-slate-900 flex items-center justify-center"
-          onClick={onOpenChat}
-          aria-label="Open chat"
-        >
-          <span className="text-2xl text-[#132a6b]">💬</span>
-        </button>
-        <button
-          className="pointer-events-auto h-14 w-14 rounded-full bg-white/95 shadow-lg shadow-slate-900 flex items-center justify-center"
-          onClick={onOpenContacts}
-          aria-label="Open police contacts"
-        >
-          <span className="text-2xl text-[#132a6b]">📞</span>
-        </button>
-=======
         {(() => {
           // Solid light-blue circular buttons (non-transparent), crisp icons
           const btnCls =
@@ -334,7 +318,6 @@ const MapPage: React.FC<MapPageProps> = ({ onOpenChat, onOpenContacts, onBackToO
             </>
           )
         })()}
->>>>>>> emily
       </div>
 
       {/* Bottom CTA / Route panel over the map */}

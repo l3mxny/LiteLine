@@ -1,15 +1,15 @@
 import React, { useState } from 'react'
 import OpeningPage from './OpeningPage'
-import MainPage from './MainPage'
+import MapPage from './MapPage'
 
 const App: React.FC = () => {
-  const [showMainPage, setShowMainPage] = useState(false)
+  const [showMapPage, setShowMapPage] = useState(false)
 
-  if (showMainPage) {
-    return <MainPage onBack={() => setShowMainPage(false)} />
+  if (showMapPage) {
+    return <MapPage />
   }
 
-  return <OpeningPage onContinue={() => setShowMainPage(true)} />
+  return <OpeningPage onContinue={() => setShowMapPage(true)} />
 }
 
 export default App

@@ -5,6 +5,7 @@ type Location = { lat: number; lng: number }
 type MapPageProps = {
   onOpenChat: () => void
   onOpenContacts: () => void
+  onBackToOpening: () => void
 }
 
 type BlueLight = {
@@ -16,7 +17,7 @@ type BlueLight = {
 
 const API_BASE_URL = 'http://localhost:3000'
 
-const MapPage: React.FC<MapPageProps> = ({ onOpenChat, onOpenContacts }) => {
+const MapPage: React.FC<MapPageProps> = ({ onOpenChat, onOpenContacts, onBackToOpening }) => {
   const mapRef = useRef<HTMLDivElement | null>(null)
   const userMarkerRef = useRef<any | null>(null)
   const destMarkerRef = useRef<any | null>(null)
@@ -226,6 +227,15 @@ const MapPage: React.FC<MapPageProps> = ({ onOpenChat, onOpenContacts }) => {
 
   return (
     <main className="relative min-h-screen bg-[#020b25] text-slate-100">
+      {/* Back button to opening page */}
+      <button
+        className="pointer-events-auto absolute left-4 top-24 z-10 inline-flex items-center gap-2 rounded-full border border-[#53c0ff]/40 bg-[#132a6b]/90 px-4 py-2 text-sm font-semibold text-[#e2f3ff] shadow-lg shadow-slate-900 backdrop-blur hover:bg-[#132a6b] hover:border-[#53c0ff]/70 transition-colors"
+        onClick={onBackToOpening}
+      >
+        <span className="text-base">←</span>
+        <span>Back</span>
+      </button>
+
       {/* Full-screen map as background */}
       <div
         ref={mapRef}
@@ -234,21 +244,21 @@ const MapPage: React.FC<MapPageProps> = ({ onOpenChat, onOpenContacts }) => {
 
       {/* Top-right floating actions (chat + call) */}
       <div className="pointer-events-none absolute right-6 top-10 flex flex-col gap-4">
-  <button
-    className="pointer-events-auto h-14 w-14 rounded-full bg-white/95 shadow-lg shadow-slate-900 flex items-center justify-center"
-    onClick={onOpenChat}
+        <button
+          className="pointer-events-auto h-14 w-14 rounded-full bg-white/95 shadow-lg shadow-slate-900 flex items-center justify-center"
+          onClick={onOpenChat}
           aria-label="Open chat"
-  >
-    <span className="text-2xl text-slate-800">💬</span>
-  </button>
+        >
+          <span className="text-2xl text-[#132a6b]">💬</span>
+        </button>
         <button
           className="pointer-events-auto h-14 w-14 rounded-full bg-white/95 shadow-lg shadow-slate-900 flex items-center justify-center"
           onClick={onOpenContacts}
           aria-label="Open police contacts"
         >
-    <span className="text-2xl text-slate-800">📞</span>
-  </button>
-</div>
+          <span className="text-2xl text-[#132a6b]">📞</span>
+        </button>
+      </div>
 
       {/* Bottom CTA / Route panel over the map */}
       <div className="pointer-events-none absolute inset-x-6 bottom-8 space-y-3">

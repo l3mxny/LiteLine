@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeRoute - Find Nearest Blue Light</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Google Maps JavaScript API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQ94zAfXNS4EtAvmEAl_Zf9GeH5nr7zjg&libraries=places,directions"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚨 SafeRoute</h1>
+            <p class="subtitle">Find Your Nearest Blue Light Emergency Station</p>
+        </header>
+
+        <div class="main-content">
+            <!-- Location Status -->
+            <div id="status" class="status-card">
+                <p>📍 Getting your location...</p>
+            </div>
+
+            <!-- Location Info -->
+            <div id="locationInfo" class="location-info" style="display: none;">
+                <p><strong>Current Location:</strong> <span id="currentCoords"></span></p>
+                <p><strong>Accuracy:</strong> <span id="locationAccuracy"></span></p>
+            </div>
+
+            <!-- Manual Location Entry -->
+            <div id="manualLocation" class="manual-location" style="display: none;">
+                <h3>Enter Location Manually</h3>
+                <div class="location-inputs">
+                    <input type="number" id="manualLat" placeholder="Latitude (e.g., 38.9869)" step="any">
+                    <input type="number" id="manualLng" placeholder="Longitude (e.g., -76.9426)" step="any">
+                    <button id="useManualLocationBtn" class="btn btn-primary">Use This Location</button>
+                </div>
+                <p class="hint">💡 Tip: You can also click on the map to set your location</p>
+            </div>
+
+            <!-- Controls -->
+            <div class="controls">
+                <button id="findNearestBtn" class="btn btn-primary" disabled>
+                    Find Nearest Blue Light
+                </button>
+                <button id="refreshLocationBtn" class="btn btn-secondary">
+                    Refresh Location
+                </button>
+                <button id="manualLocationBtn" class="btn btn-secondary">
+                    Enter Location Manually
+                </button>
+            </div>
+
+            <!-- Results -->
+            <div id="results" class="results-container" style="display: none;">
+                <h2>Nearest Blue Light Stations</h2>
+                <div id="blueLightsList" class="blue-lights-list"></div>
+            </div>
+
+            <!-- Map Container -->
+            <div id="map" class="map-container"></div>
+
+            <!-- Directions Panel -->
+            <div id="directions-panel" class="directions-panel" style="display: none;">
+                <h3>Directions</h3>
+                <div id="directions-content"></div>
+            </div>
+        </div>
+
+        <!-- Emergency Quick Actions -->
+        <div class="emergency-actions">
+            <button class="emergency-btn" onclick="window.location.href='tel:911'">
+                🚨 Call 911
+            </button>
+            <button class="emergency-btn" onclick="window.location.href='tel:3014053555'">
+                📞 UMD Police<br>(301-405-3555)
+            </button>
+        </div>
+    </div>
+
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>
+

@@ -15,7 +15,7 @@ const CallCard: React.FC<{ label: string; number: string }> = ({ label, number }
   }
 
   return (
-    <div className="w-full rounded-2xl bg-[#cfe6ff]/80 text-[#0f2c61] shadow-lg transition-shadow">
+    <div className="w-full rounded-2xl bg-[#cfe0f5] text-[#0f172a] shadow-lg">
       <button
         onClick={handleCall}
         className="w-full flex items-center justify-between px-5 py-4 rounded-2xl focus:outline-none min-h-[96px]"
@@ -26,10 +26,10 @@ const CallCard: React.FC<{ label: string; number: string }> = ({ label, number }
           <div className="text-sm font-semibold opacity-90">({number})</div>
         </div>
         <div
-          className="flex-none h-14 w-14 rounded-full bg-white grid place-items-center text-[#0f2c61]
-                     shadow-lg ring-2 ring-[#0f2c61]/25
+          className="flex-none h-14 w-14 rounded-full bg-white grid place-items-center text-[#0f172a]
+                     shadow-lg ring-2 ring-[#0f172a]/15
                      active:scale-95 transition-transform duration-150
-                     focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[#0f2c61]/35"
+                     focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[#0f172a]/25"
           aria-hidden="true"
         >
           <svg
@@ -43,7 +43,7 @@ const CallCard: React.FC<{ label: string; number: string }> = ({ label, number }
             strokeLinejoin="round"
             aria-hidden="true"
           >
-            <path d="M22 16.92V21a1 1 0 0 1-1.1 1 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 3 3.1 1 1 0 0 1 4 2h4.09a1 1 0 0 1 1 .75l1 3.49a1 1 0 0 1-.27 1L8.91 9.91a16 16 0 0 0 6 6l2.67-1.9a1 1 0 0 1 1-.06l3.49 1a1 1 0 0 1 .65.97z" />
+            <path d="M15.2 16.1c.7.2 1.3.5 1.9.9.4.3.5.9.3 1.3l-.5.9c-.3.6-1 .9-1.7.8-2.6-.2-5.4-1.6-7.8-4.1S3 10.6 2.8 8c-.1-.7.2-1.4.8-1.7l.9-.5c.4-.2 1 0 1.3.3.4.6.7 1.2.9 1.9.1.3 0 .7-.2.9l-1.1 1.1c.7 1.5 1.8 2.9 3.1 4.2 1.3 1.3 2.7 2.4 4.2 3.1l1.1-1.1c.2-.2.6-.3.9-.2z" />
           </svg>
         </div>
       </button>
@@ -82,11 +82,17 @@ const PoliceContacts: React.FC<PoliceContactsProps> = ({ onBack }) => {
             </svg>
           </button>
         </div>
-        <h1 className="mt-4 text-4xl font-extrabold tracking-wide">UMPD</h1>
+        <h1 className="mt-5 text-5xl font-extrabold tracking-wide">UMPD</h1>
       </header>
 
-      <section className="flex-1 px-5 space-y-6 mt-6">
-        {/* Disclaimer first */}
+      <section className="flex-1 px-5 space-y-7 mt-6">
+        {/* Contacts first */}
+        <CallCard label="Emergency" number={EMERGENCY_NUMBER} />
+        <CallCard label="Request Walking Safety Escort" number={NON_EMERGENCY_NUMBER} />
+
+        <hr className="border-white/20" />
+
+        {/* Disclaimer below contacts */}
         <div className="rounded-2xl bg-white/15 border border-white/15 text-white px-6 py-6 shadow-sm">
           <div className="flex items-center gap-2 mb-2">
             <h2 className="text-2xl font-extrabold">Disclaimer</h2>
@@ -101,12 +107,6 @@ const PoliceContacts: React.FC<PoliceContactsProps> = ({ onBack }) => {
             call emergency services right away. We cannot guarantee response times or user safety.
           </p>
         </div>
-
-        <hr className="border-white/20" />
-
-        {/* Contacts after disclaimer */}
-        <CallCard label="Emergency" number={EMERGENCY_NUMBER} />
-        <CallCard label="Request Walking Safety Escort" number={NON_EMERGENCY_NUMBER} />
       </section>
     </main>
   )

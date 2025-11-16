@@ -12,7 +12,7 @@ const OpeningPage: React.FC<OpeningPageProps> = ({ onContinue, leftImageSrc }) =
   useEffect(() => {
     const t = setTimeout(() => {
       onContinue()
-    }, 5500)
+    }, 4250)
     return () => clearTimeout(t)
   }, [onContinue])
 
@@ -31,15 +31,15 @@ const OpeningPage: React.FC<OpeningPageProps> = ({ onContinue, leftImageSrc }) =
 
       <section className="flex flex-1 flex-col justify-center pl-32 md:pl-40">
         <div className="flex flex-col items-center text-center gap-8">
-          <h1 className="text-5xl font-extrabold tracking-tight text-white">LiteLine</h1>
+          <h1 className="text-6xl md:text-7xl font-extrabold tracking-tight text-white">LiteLine</h1>
 
           <div className="flex items-center justify-center">
             <div
-              className="relative h-40 w-40 rounded-full border-[6px] border-[#53c0ff] bg-[#031025] flex items-center justify-center"
+              className="relative h-48 w-48 md:h-56 md:w-56 rounded-full border-[6px] border-[#53c0ff] bg-[#031025] flex items-center justify-center"
               style={{ animation: 'outerRingGlow 1.8s ease-in-out infinite' }}
             >
               <div
-                className="h-28 w-28 rounded-full border-[3px] border-[#53c0ff] flex items-center justify-center overflow-hidden"
+                className="h-36 w-36 md:h-40 md:w-40 rounded-full border-[3px] border-[#53c0ff] flex items-center justify-center overflow-hidden"
                 style={{ animation: 'innerRingGlow 1.8s ease-in-out infinite' }}
               >
                 <img src={logo} alt="LiteLine logo" className="h-full w-full object-contain" />

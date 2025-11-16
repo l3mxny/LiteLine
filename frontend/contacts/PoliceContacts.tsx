@@ -65,22 +65,32 @@ const PoliceContacts: React.FC<PoliceContactsProps> = ({ onBack }) => {
   }
   return (
     <main className="min-h-screen w-full bg-[#07132c] text-white flex flex-col">
-      <header className="sticky top-0 z-10 px-5 pt-5 pb-1 bg-[#07132c] relative">
-        <div className="absolute right-2 top-3 flex items-center gap-3">
-          <img src={logoImg} alt="LiteLine logo" className="h-12 w-12 object-contain" />
-          <span className="text-white font-extrabold text-4xl md:text-5xl tracking-wide">LiteLine</span>
-        </div>
-
-        <div className="flex">
+      <header className="sticky top-0 z-10 px-5 pt-5 pb-3 bg-[#07132c]">
+        <div className="flex items-center justify-between">
           <button
             onClick={handleBack}
-            className="h-12 w-12 rounded-full bg-white/15 text-white grid place-items-center shadow-inner ring-1 ring-white/20 hover:bg-white/20 transition-colors"
-            aria-label="Back"
+            className="inline-flex items-center gap-2 rounded-full bg-white/15 text-white px-4 py-2 shadow-inner ring-1 ring-white/20 hover:bg-white/20 transition-colors"
+            aria-label="Back to map"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              className="h-5 w-5"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
               <polyline points="14 18 8 12 14 6"></polyline>
             </svg>
+            <span className="text-sm font-semibold hidden xs:inline">Back</span>
           </button>
+
+          <div className="flex items-center gap-3">
+            <img src={logoImg} alt="LiteLine logo" className="h-11 w-11 object-contain" />
+            <span className="text-white font-extrabold text-4xl md:text-5xl tracking-wide">LiteLine</span>
+          </div>
         </div>
         <h1 className="mt-6 text-6xl md:text-7xl font-extrabold tracking-wide">UMPD</h1>
       </header>

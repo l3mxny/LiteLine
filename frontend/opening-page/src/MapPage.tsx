@@ -2,6 +2,11 @@ import React, { useEffect, useRef, useState } from 'react'
 
 type Location = { lat: number; lng: number }
 
+type MapPageProps = {
+  onOpenChat: () => void
+  onOpenContacts: () => void
+}
+
 type BlueLight = {
   latitude: number
   longitude: number
@@ -11,7 +16,7 @@ type BlueLight = {
 
 const API_BASE_URL = 'http://localhost:3000'
 
-const MapPage: React.FC = () => {
+const MapPage: React.FC<MapPageProps> = ({ onOpenChat, onOpenContacts }) => {
   const mapRef = useRef<HTMLDivElement | null>(null)
   const userMarkerRef = useRef<any | null>(null)
   const destMarkerRef = useRef<any | null>(null)
@@ -229,13 +234,21 @@ const MapPage: React.FC = () => {
 
       {/* Top-right floating actions (chat + call) */}
       <div className="pointer-events-none absolute right-6 top-10 flex flex-col gap-4">
-        <button className="pointer-events-auto h-14 w-14 rounded-full bg-white/95 shadow-lg shadow-slate-900 flex items-center justify-center">
-          <span className="text-2xl text-slate-800">💬</span>
-        </button>
-        <button className="pointer-events-auto h-14 w-14 rounded-full bg-white/95 shadow-lg shadow-slate-900 flex items-center justify-center">
-          <span className="text-2xl text-slate-800">📞</span>
-        </button>
-      </div>
+  <button
+    className="pointer-events-auto h-14 w-14 rounded-full bg-white/95 shadow-lg shadow-slate-900 flex items-center justify-center"
+    onClick={onOpenChat}
+          aria-label="Open chat"
+  >
+    <span className="text-2xl text-slate-800">💬</span>
+  </button>
+        <button
+          className="pointer-events-auto h-14 w-14 rounded-full bg-white/95 shadow-lg shadow-slate-900 flex items-center justify-center"
+          onClick={onOpenContacts}
+          aria-label="Open police contacts"
+        >
+    <span className="text-2xl text-slate-800">📞</span>
+  </button>
+</div>
 
       {/* Bottom CTA / Route panel over the map */}
       <div className="pointer-events-none absolute inset-x-6 bottom-8 space-y-3">

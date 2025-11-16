@@ -3,6 +3,7 @@ module.exports = {
   content: [
     "./index.html",
     "./src/**/*.{ts,tsx,js,jsx}",
+    "../chat-ai/**/*.{ts,tsx,js,jsx,html}",
   ],
   theme: {
     extend: {

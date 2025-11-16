@@ -1,4 +1,4 @@
-## LiteLine – Campus SafeRoute Companion
+## LiteLine
 
 **LiteLine** is a campus safety companion that helps students quickly find the nearest blue light, contact campus police, and get safety guidance when walking alone.
 

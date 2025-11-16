@@ -2,11 +2,16 @@
 
 **LiteLine** is a campus safety companion that helps students quickly find the nearest blue light, contact campus police, and get safety guidance when walking alone.
 
-## Features
+## What it does
 
-- **Live SafeRoute Map**: Uses Google Maps to show your current location and draw a walking route to the nearest blue light.
-- **One‑Tap Contacts**: Quick call buttons for campus police emergency and walking escort lines.
-- **Safety “LiteBot” Chat**: Rule‑based chatbot that provides curated safety guidance for common situations (feeling unsafe, helping a friend, car accidents, etc.).
+**LiteLine** gives students fast, clear access to campus safety resources during their most vulnerable moments. In just two clicks, the app:
+
+- **Finds your real-time location**
+- **Identifies the nearest blue light emergency station**
+- **Provides a clear, safe walking route**
+- **Shows essential safety info without loading delays or clutter**
+
+LiteLine is simple, fast, and designed specifically for students walking alone at night, because safety should be immediate and not something you have to search for.
 
 ## Tech Stack
 

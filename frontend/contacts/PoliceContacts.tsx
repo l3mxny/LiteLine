@@ -15,36 +15,38 @@ const CallCard: React.FC<{ label: string; number: string }> = ({ label, number }
   }
 
   return (
-    <div className="w-full rounded-2xl bg-[#cfe0f5] text-[#0f172a] shadow-lg">
+    <div className="w-full rounded-2xl bg-white/15 text-white shadow-lg border border-white/15 mb-6">
       <button
         onClick={handleCall}
-        className="w-full rounded-2xl bg-gradient-to-r from-[#53c0ff] to-[#1f6d94] text-white px-6 py-5 text-left shadow-lg shadow-slate-900/60 focus:outline-none active:scale-[0.98] transition transform hover:brightness-110"
+        className="w-full rounded-2xl bg-transparent px-6 py-5 text-left shadow-none focus:outline-none active:scale-[0.98] transition transform hover:bg-white/10"
         aria-label={`Call ${label} at ${number}`}
       >
-        <div className="text-left">
-          <div className="text-2xl font-extrabold tracking-wide">{label}</div>
-          <div className="text-sm font-semibold opacity-90">({number})</div>
-        </div>
-        <div
-          className="flex-none h-14 w-14 rounded-full bg-white grid place-items-center text-[#0f172a]
-                     shadow-lg ring-2 ring-[#0f172a]/15
-                     active:scale-95 transition-transform duration-150
-                     focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[#0f172a]/25"
-          aria-hidden="true"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            className="h-6 w-6"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
+        <div className="flex items-center justify-between gap-4">
+          <div className="text-left">
+            <div className="text-2xl font-extrabold tracking-wide">{label}</div>
+            <div className="text-sm font-semibold text-white/80">({number})</div>
+          </div>
+          <div
+            className="flex-none h-14 w-14 rounded-full bg-white/90 grid place-items-center text-[#0f172a]
+                       shadow-lg ring-2 ring-white/30
+                       active:scale-95 transition-transform duration-150
+                       focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white/40"
             aria-hidden="true"
           >
-            <path d="M15.2 16.1c.7.2 1.3.5 1.9.9.4.3.5.9.3 1.3l-.5.9c-.3.6-1 .9-1.7.8-2.6-.2-5.4-1.6-7.8-4.1S3 10.6 2.8 8c-.1-.7.2-1.4.8-1.7l.9-.5c.4-.2 1 0 1.3.3.4.6.7 1.2.9 1.9.1.3 0 .7-.2.9l-1.1 1.1c.7 1.5 1.8 2.9 3.1 4.2 1.3 1.3 2.7 2.4 4.2 3.1l1.1-1.1c.2-.2.6-.3.9-.2z" />
-          </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              className="h-6 w-6"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M15.2 16.1c.7.2 1.3.5 1.9.9.4.3.5.9.3 1.3l-.5.9c-.3.6-1 .9-1.7.8-2.6-.2-5.4-1.6-7.8-4.1S3 10.6 2.8 8c-.1-.7.2-1.4.8-1.7l.9-.5c.4-.2 1 0 1.3.3.4.6.7 1.2.9 1.9.1.3 0 .7-.2.9l-1.1 1.1c.7 1.5 1.8 2.9 3.1 4.2 1.3 1.3 2.7 2.4 4.2 3.1l1.1-1.1c.2-.2.6-.3.9-.2z" />
+            </svg>
+          </div>
         </div>
       </button>
     </div>
@@ -95,15 +97,18 @@ const PoliceContacts: React.FC<PoliceContactsProps> = ({ onBack }) => {
         <h1 className="mt-6 text-6xl md:text-7xl font-extrabold tracking-wide">UMPD</h1>
       </header>
 
-      <section className="flex-1 px-5 space-y-16 mt-10">
+      <section className="flex-1 px-5 mt-10">
         {/* Contacts first */}
         <CallCard label="Emergency" number={EMERGENCY_NUMBER} />
+        {/* Explicit spacer between buttons */}
+        <div className="h-8" />
         <CallCard label="Request Walking Safety Escort" number={NON_EMERGENCY_NUMBER} />
 
+        <div className="h-10" />
         <hr className="border-white/20" />
 
         {/* Disclaimer below contacts */}
-        <div className="rounded-2xl bg-white/15 border border-white/15 text-white px-6 py-6 shadow-sm">
+        <div className="mt-8 rounded-2xl bg-white/15 border border-white/15 text-white px-6 py-6 shadow-sm">
           <div className="flex items-center gap-2 mb-2">
             <h2 className="text-2xl font-extrabold">Disclaimer</h2>
             <span className="text-white/90">

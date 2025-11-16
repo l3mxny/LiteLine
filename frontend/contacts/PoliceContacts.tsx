@@ -1,6 +1,6 @@
 // @ts-nocheck
 import React from 'react'
-import logoImg from '../chat-ai/logo-removebg-preview.png'
+import logoImg from '../logo.png'
 
 interface PoliceContactsProps {
   onBack?: () => void
@@ -15,22 +15,22 @@ const CallCard: React.FC<{ label: string; number: string }> = ({ label, number }
   }
 
   return (
-    <div className="w-full rounded-2xl bg-white/15 text-white shadow-lg border border-white/15 mb-6">
+    <div className="w-full rounded-2xl bg-[#C2E2FF] text-[#1E3679] shadow-lg border border-[#1E3679]/15 mb-6">
       <button
         onClick={handleCall}
-        className="w-full rounded-2xl bg-transparent px-6 py-5 text-left shadow-none focus:outline-none active:scale-[0.98] transition transform hover:bg-white/10"
+        className="w-full rounded-2xl bg-transparent px-6 py-5 text-left shadow-none focus:outline-none active:scale-[0.98] transition transform hover:bg-[#C2E2FF]/90 min-h-[120px]"
         aria-label={`Call ${label} at ${number}`}
       >
         <div className="flex items-center justify-between gap-4">
           <div className="text-left">
             <div className="text-2xl font-extrabold tracking-wide">{label}</div>
-            <div className="text-sm font-semibold text-white/80">({number})</div>
+            <div className="text-sm font-semibold text-[#1E3679]/80">({number})</div>
           </div>
           <div
-            className="flex-none h-14 w-14 rounded-full bg-white/90 grid place-items-center text-[#0f172a]
-                       shadow-lg ring-2 ring-white/30
+            className="flex-none h-14 w-14 rounded-full bg-white grid place-items-center text-[#1E3679]
+                       shadow-lg ring-2 ring-[#1E3679]/25
                        active:scale-95 transition-transform duration-150
-                       focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white/40"
+                       focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[#1E3679]/35"
             aria-hidden="true"
           >
             <svg
@@ -65,37 +65,31 @@ const PoliceContacts: React.FC<PoliceContactsProps> = ({ onBack }) => {
       window.location.assign('/')
     }
   }
-  return (
-    <main className="min-h-screen w-full bg-[#07132c] text-white flex flex-col">
-      <header className="sticky top-0 z-10 px-5 pt-5 pb-3 bg-[#07132c]">
-        <div className="flex items-center justify-between">
+          return (
+           <main className="min-h-screen w-full bg-[#08142F] text-white flex flex-col">
+      {/* Match Chat-AI header structure and spacing */}
+      <header className="sticky top-0 z-20 grid grid-cols-3 items-center px-4 pt-4 pb-2 bg-[#08142F]">
+        <div className="flex">
           <button
             onClick={handleBack}
-            className="inline-flex items-center gap-2 rounded-full bg-white/15 text-white px-4 py-2 shadow-inner ring-1 ring-white/20 hover:bg-white/20 transition-colors"
-            aria-label="Back to map"
+            className="h-12 w-12 rounded-full bg-white/15 text-white grid place-items-center shadow-inner ring-1 ring-white/20 hover:bg-white/20 transition-colors"
+            aria-label="Back"
+            title="Back"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              className="h-5 w-5"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2.2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
               <polyline points="14 18 8 12 14 6"></polyline>
             </svg>
-            <span className="text-sm font-semibold hidden xs:inline">Back</span>
           </button>
-
-          <div className="flex items-center gap-3">
-            <img src={logoImg} alt="LiteLine logo" className="h-11 w-11 object-contain" />
-            <span className="text-white font-extrabold text-4xl md:text-5xl tracking-wide">LiteLine</span>
-          </div>
         </div>
-        <h1 className="mt-6 text-6xl md:text-7xl font-extrabold tracking-wide">UMPD</h1>
+        <div />
+        <div className="flex justify-end items-center gap-3">
+          <img src={logoImg} alt="LiteLine logo" className="h-11 w-11 object-contain" />
+          <span className="text-white font-extrabold text-3xl tracking-wide">LiteLine</span>
+        </div>
       </header>
+      <div className="px-5">
+        <h1 className="mt-6 text-6xl md:text-7xl font-extrabold tracking-wide">UMPD</h1>
+      </div>
 
       <section className="flex-1 px-5 mt-10">
         {/* Contacts first */}
@@ -108,16 +102,16 @@ const PoliceContacts: React.FC<PoliceContactsProps> = ({ onBack }) => {
         <hr className="border-white/20" />
 
         {/* Disclaimer below contacts */}
-        <div className="mt-8 rounded-2xl bg-white/15 border border-white/15 text-white px-6 py-6 shadow-sm">
+        <div className="mt-8 rounded-2xl bg-[#ABBBCA] border border-[#1E3679]/15 text-[#1E3679] px-6 py-6 shadow-sm">
           <div className="flex items-center gap-2 mb-2">
-            <h2 className="text-2xl font-extrabold">Disclaimer</h2>
-            <span className="text-white/90">
+            <h2 className="text-3xl md:text-4xl font-extrabold">Disclaimer</h2>
+            <span className="text-[#1E3679]">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="h-5 w-5" fill="currentColor" aria-hidden="true">
                 <path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2zm0 4a1.25 1.25 0 1 1-1.25 1.25A1.25 1.25 0 0 1 12 6zm1.25 12h-2.5v-8h2.5z" />
               </svg>
             </span>
           </div>
-          <p className="text-[18px] md:text-[19px] leading-relaxed text-white/90">
+          <p className="text-[18px] md:text-[19px] leading-relaxed text-[#1E3679]">
             This feature provides quick access to campus police contact information. If you are in immediate danger,
             call emergency services right away. We cannot guarantee response times or user safety.
           </p>

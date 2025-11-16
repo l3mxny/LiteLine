@@ -20,7 +20,6 @@ const App: React.FC = () => {
       <MapPage
         onOpenChat={() => setView('chat')}
         onOpenContacts={() => setView('contacts')}
-        onBackToOpening={() => setView('opening')}
       />
     )
   }

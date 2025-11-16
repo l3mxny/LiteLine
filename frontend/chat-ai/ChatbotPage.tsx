@@ -89,7 +89,7 @@ const ChatbotPage: React.FC<ChatbotPageProps> = ({ onBack }) => {
 
   const Header = useMemo(() => {
     return (
-      <header className="sticky top-0 z-20 grid grid-cols-3 items-center px-4 pt-4 pb-2 bg-[#07132c]">
+      <header className="sticky top-0 z-20 grid grid-cols-3 items-center px-4 pt-4 pb-2 bg-[#08142F]">
         <div className="flex">
           <button
             type="button"
@@ -113,7 +113,7 @@ const ChatbotPage: React.FC<ChatbotPageProps> = ({ onBack }) => {
   }, [onBack])
 
   return (
-    <main className="min-h-screen w-full bg-[#07132c] text-white flex flex-col">
+    <main className="min-h-screen w-full bg-[#08142F] text-white flex flex-col">
       {Header}
 
       {/* Messages */}
@@ -147,7 +147,7 @@ const ChatbotPage: React.FC<ChatbotPageProps> = ({ onBack }) => {
       </section>
 
       {/* Composer */}
-      <div className="fixed inset-x-0 bottom-0 px-4 py-4 bg-gradient-to-t from-[#07132c] via-[#07132c]/95 to-transparent">
+      <div className="fixed inset-x-0 bottom-0 px-4 py-4 bg-gradient-to-t from-[#08142F] via-[#08142F]/95 to-transparent">
         {/* Minimal suggestion chips (3) just above the composer */}
         {showSuggestions && remainingSuggestions.length > 0 && (
           <div className="mx-auto max-w-2xl w-full mb-10">

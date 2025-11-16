@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import logo from '../logo-removebg-preview.png'
 import poleImg from '../pole.png'
 
@@ -8,6 +8,19 @@ interface OpeningPageProps {
 }
 
 const OpeningPage: React.FC<OpeningPageProps> = ({ onContinue, leftImageSrc }) => {
+  const [pageLoaded, setPageLoaded] = useState(false)
+
+  // Start the left-figure animation only after the page is fully loaded
+  useEffect(() => {
+    const onLoad = () => setPageLoaded(true)
+    if (document.readyState === 'complete') {
+      setPageLoaded(true)
+    } else {
+      window.addEventListener('load', onLoad, { once: true })
+    }
+    return () => window.removeEventListener('load', onLoad)
+  }, [])
+
   // Automatically advance to the map after a brief loading glow
   useEffect(() => {
     const t = setTimeout(() => {
@@ -25,7 +38,7 @@ const OpeningPage: React.FC<OpeningPageProps> = ({ onContinue, leftImageSrc }) =
           src={leftImageSrc || poleImg}
           alt=""
           className="h-full w-24 rounded-t-3xl object-contain filter contrast-125"
-          style={{ animation: 'slideUpReveal 2.2s ease-out forwards' }}
+          style={{ animation: pageLoaded ? 'slideUpReveal 2.2s ease-out forwards' : 'none' }}
           draggable={false}
         />
       </div>

@@ -25,6 +25,7 @@ const OpeningPage: React.FC<OpeningPageProps> = ({ onContinue, leftImageSrc }) =
           src={leftImageSrc || poleImg}
           alt=""
           className="h-full w-24 rounded-t-3xl object-contain filter contrast-125"
+          style={{ animation: 'slideUpReveal 2.2s ease-out forwards' }}
           draggable={false}
         />
       </div>
@@ -55,8 +56,13 @@ const OpeningPage: React.FC<OpeningPageProps> = ({ onContinue, leftImageSrc }) =
         </div>
       </footer>
 
-      {/* Local keyframes for glow */}
+      {/* Local keyframes for glow and left figure slide-up */}
       <style>{`
+        @keyframes slideUpReveal {
+          0% { transform: translateY(25%); opacity: 0.0; }
+          60% { opacity: 1; }
+          100% { transform: translateY(0%); opacity: 1; }
+        }
         @keyframes outerRingGlow {
           0%, 100% { box-shadow: 0 0 0 0 rgba(83,192,255,0.0); }
           50% { box-shadow: 0 0 28px 6px rgba(83,192,255,0.75); }

@@ -324,9 +324,9 @@ const MapPage: React.FC<MapPageProps> = ({ onOpenChat, onOpenContacts }) => {
             onClick={handleFindNearest}
             disabled={isFinding || !userLocation}
           >
-            <span>{isFinding ? 'Finding Blue Lite…' : 'Find Nearest Blue Lite'}</span>
+            <span className="leading-none">{isFinding ? 'Finding Blue Lite…' : 'Find Nearest Blue Lite'}</span>
             <span className="ml-2 inline-flex items-center">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="h-5 w-5">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="h-6 w-6">
                 {/* White pin with blue dot (Apple‑like) */}
                 <path d="M12 2c-3.9 0-7 3.1-7 7 0 5 7 12 7 12s7-7 7-12c0-3.9-3.1-7-7-7z" fill="#e8f0ff"/>
                 <circle cx="12" cy="9" r="2.2" fill="#2647a4"/>

@@ -12,7 +12,7 @@ const OpeningPage: React.FC<OpeningPageProps> = ({ onContinue, leftImageSrc }) =
   useEffect(() => {
     const t = setTimeout(() => {
       onContinue()
-    }, 4250)
+    }, 4000)
     return () => clearTimeout(t)
   }, [onContinue])
 
@@ -20,11 +20,11 @@ const OpeningPage: React.FC<OpeningPageProps> = ({ onContinue, leftImageSrc }) =
     <main
       className="relative min-h-screen w-full bg-[#08142F] text-white font-sans flex flex-col justify-between px-4 py-10 md:px-8 overflow-hidden"
     >
-      <div className="pointer-events-none absolute inset-y-0 left-0 flex">
+      <div className="pointer-events-none absolute inset-y-0 left-6 flex">
         <img
           src={leftImageSrc || poleImg}
           alt=""
-          className="h-full w-20 rounded-t-3xl object-cover"
+          className="h-full w-24 rounded-t-3xl object-contain filter contrast-125"
           draggable={false}
         />
       </div>

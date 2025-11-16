@@ -66,9 +66,9 @@ const PoliceContacts: React.FC<PoliceContactsProps> = ({ onBack }) => {
   return (
     <main className="min-h-screen w-full bg-[#07132c] text-white flex flex-col">
       <header className="sticky top-0 z-10 px-5 pt-5 pb-1 bg-[#07132c] relative">
-        <div className="absolute right-5 top-5 flex items-center gap-3">
-          <img src={logoImg} alt="LiteLine logo" className="h-11 w-11 object-contain" />
-          <span className="text-white font-extrabold text-3xl tracking-wide">LiteLine</span>
+        <div className="absolute right-2 top-3 flex items-center gap-3">
+          <img src={logoImg} alt="LiteLine logo" className="h-12 w-12 object-contain" />
+          <span className="text-white font-extrabold text-4xl md:text-5xl tracking-wide">LiteLine</span>
         </div>
 
         <div className="flex">
@@ -82,10 +82,10 @@ const PoliceContacts: React.FC<PoliceContactsProps> = ({ onBack }) => {
             </svg>
           </button>
         </div>
-        <h1 className="mt-5 text-5xl font-extrabold tracking-wide">UMPD</h1>
+        <h1 className="mt-6 text-6xl md:text-7xl font-extrabold tracking-wide">UMPD</h1>
       </header>
 
-      <section className="flex-1 px-5 space-y-7 mt-6">
+      <section className="flex-1 px-5 space-y-16 mt-10">
         {/* Contacts first */}
         <CallCard label="Emergency" number={EMERGENCY_NUMBER} />
         <CallCard label="Request Walking Safety Escort" number={NON_EMERGENCY_NUMBER} />
